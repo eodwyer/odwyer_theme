@@ -1,0 +1,74 @@
+// Colours
+:root {
+  // https://coolors.co/001524-15616d-ffecd1-ff7d00-78290f
+  --rich-black-fogra-29: #001524;
+  --ming: #2c666e;
+  --amber: #FF7D00;
+  --middle-blue: #90ddf0;
+  --blanched-almond: #FFECD1;
+  
+  --rich-black: #07393c;
+
+  --color-alpha: var(--rich-black-fogra-29); 
+  --color-beta: var(--ming);
+  --color-gamma: var(--amber);
+  --color-delta: var(--middle-blue);
+  --color-epsilon: var(--blanched-almond);
+
+  --side-pad: 2rem; 
+  --section-pad: 1rem;
+}
+
+$color-alpha: #001524;
+$color-beta: #2c666e;
+$color-gamma: #FF7D00;
+$color-delta: #90ddf0;
+$color-epsilon: #FFECD1;
+
+$color__background-body: #fff;
+$color__background-screen: var(--color-epsilon);
+$color__background-hr: var(--color-delta);
+$color__background-button: var(--ming);
+$color__background-pre: var(--color-delta);
+$color__background-ins: var(--color-epsilon);
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #4169e1; //royalblue
+$color__link-visited: #800080; //purple
+$color__link-hover: #191970; //midnightblue
+$color__text-main: var(--color-alpha);
+
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+// Typography
+// stylelint-disable value-keyword-case
+$font__headings: 'Anton', sans-serif;;
+$font__main: 'Martel', serif;// "Georgia", serif;
+// stylelint-enable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font__letter-spacing: .1rem;
+$font__weight__headings: 400;
+
+// Columns
+$columns: (
+  1: 100%,
+  2: 50%,
+  3: 33.33%,
+  4: 25%,
+  5: 20%,
+  6: 16.66%,
+  7: 14.28%,
+  8: 12.5%,
+  9: 11.11%
+);
+$columns__margin: 3.8%;
+
+//Structure
+$size__site-main: 100%;
+

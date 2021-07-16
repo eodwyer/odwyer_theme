@@ -1,14 +1,45 @@
 a {
- color: $color__link;
+ color: inherit;
+ display: inline-block;
+ position: relative;
+ text-decoration: none;
+
+ &:after {
+  background: var(--color-delta);
+  bottom: .1em;
+  content: "";
+  height: .25rem;
+  left: 0;
+  position: absolute;
+  width: 100%;
+ }
+
+ &:before {
+  background: var(--color-gamma);
+  bottom: .1em;
+  content: "";
+  height: .25rem;
+  left: 0;
+  max-width: 0;
+  position: absolute;
+  transition: all .5s;
+  width: 100%;
+  z-index: 10;
+ }
+
 
  &:visited {
-  color: $color__link-visited;
+
  }
 
  &:hover,
  &:focus,
  &:active {
-  color: $color__link-hover;
+  color: inherit;
+
+  &:before {
+   max-width: 100%;
+  }
  }
 
  &:focus {

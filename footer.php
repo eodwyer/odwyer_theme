@@ -28,6 +28,14 @@
  </footer><!-- #colophon -->
 </div><!-- #page -->
 
+<div class="color-palette" style="display: none;">
+ <div class="color-palette__swatch color-palette__swatch--alpha">Alpha</div>
+ <div class="color-palette__swatch color-palette__swatch--beta">Beta</div>
+ <div class="color-palette__swatch color-palette__swatch--gamma">Gamma</div>
+ <div class="color-palette__swatch color-palette__swatch--delta">Delta</div>
+ <div class="color-palette__swatch color-palette__swatch--epsilon">epsilon</div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

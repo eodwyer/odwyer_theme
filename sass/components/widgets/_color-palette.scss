@@ -1,0 +1,35 @@
+.color-palette {
+  display: flex;
+  overflow: hidden;
+  width: 90vw;
+
+  &__swatch {
+    color: white;
+    height: 100px;
+    padding: 1em;
+    text-align: center;
+    width: 100px;
+
+    &--alpha {
+      background: var(--color-alpha);
+    }
+
+    &--beta {
+      background: var(--color-beta);
+    }
+
+    &--gamma {
+      background: var(--color-gamma);
+    }
+
+    &--delta {
+      color: black;
+      background: var(--color-delta);
+    }
+
+    &--epsilon {
+      color: black;
+      background: var(--color-epsilon);
+    }
+  }
+}

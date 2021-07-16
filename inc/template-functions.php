@@ -18,7 +18,7 @@ function odwyer_body_classes( $classes ) {
  }
 
  // Adds a class of no-sidebar when there is no sidebar present.
- if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+ if ( !is_active_sidebar( 'sidebar-1') || is_page_template("homepage.php") || is_page_template("portfolio.php") ) {
   $classes[] = 'no-sidebar';
  }
 

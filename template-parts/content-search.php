@@ -6,30 +6,24 @@
  *
  * @package odwyer
  */
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
- <header class="entry-header">
-  <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-  <?php if ( 'post' === get_post_type() ) : ?>
-  <div class="entry-meta">
-   <?php
-   odwyer_posted_on();
-   odwyer_posted_by();
-   ?>
-  </div><!-- .entry-meta -->
-  <?php endif; ?>
- </header><!-- .entry-header -->
-
- <?php odwyer_post_thumbnail(); ?>
-
- <div class="entry-summary">
-  <?php the_excerpt(); ?>
- </div><!-- .entry-summary -->
-
- <footer class="entry-footer">
-  <?php odwyer_entry_footer(); ?>
- </footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<article id="<?php the_ID(); ?>" class="gutenberg-single-post">
+  <?php the_post_thumbnail(); ?>
+  <div class="gutenberg-single-post__overlay">
+    <header>
+      <?php
+        the_title(
+          sprintf(
+            '<h3 class="gutenberg-single-post__title"><a class="gutenberg-single-post__link" href="%s" rel="bookmark">',
+            esc_url( get_permalink() ) ), '</a></h3>'
+          );
+      ?>
+    </header><!-- .entry-header -->
+    <div class="gutenberg-single-post__content">
+      <?php
+      the_excerpt();
+      ?>
+    </div><!-- .entry-content -->
+  </div>
+</article>

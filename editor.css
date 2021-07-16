@@ -1,0 +1,458 @@
+/* Editor Styles */
+:root {
+	--rich-black-fogra-29: #001524;
+	--ming: #2c666e;
+	--amber: #FF7D00;
+	--middle-blue: #90ddf0;
+	--blanched-almond: #FFECD1;
+	--rich-black: #07393c;
+	--color-alpha: var(--rich-black-fogra-29);
+	--color-beta: var(--ming);
+	--color-gamma: var(--amber);
+	--color-delta: var(--middle-blue);
+	--color-epsilon: var(--blanched-almond);
+	--side-pad: 2rem;
+	--section-pad: 1rem;
+}
+
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: var(--color-alpha);
+	font-family: "Martel", serif;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: "Anton", sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+	clear: both;
+}
+
+h1, .h1 {
+	font-size: 4rem;
+}
+
+h2, .h2 {
+	font-size: 2.75rem;
+}
+
+h3, .h3 {
+	font-size: 2.5rem;
+}
+
+h4, .h4 {
+	font-size: 2.25rem;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: var(--color-delta);
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: var(--color-epsilon);
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+	background: #fff;
+}
+
+hr {
+	background-color: var(--color-delta);
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 1em;
+	padding-left: 0;
+}
+
+ul li,
+ol li {
+	margin-bottom: .75rem;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color: inherit;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+}
+
+a:after {
+	background: var(--color-delta);
+	bottom: .1em;
+	content: "";
+	height: .25rem;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+a:before {
+	background: var(--color-gamma);
+	bottom: .1em;
+	content: "";
+	height: .25rem;
+	left: 0;
+	max-width: 0;
+	position: absolute;
+	transition: all .5s;
+	width: 100%;
+	z-index: 10;
+}
+
+a:hover, a:focus, a:active {
+	color: inherit;
+}
+
+a:hover:before, a:focus:before, a:active:before {
+	max-width: 100%;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn,
+div.wpforms-container-full .wpforms-form button[type="submit"] {
+	font-family: "Anton", sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+	border: 1px solid;
+	border-color: #663200;
+	border-radius: 3px;
+	background: var(--color-gamma);
+	color: var(--color-alpha);
+	font-size: 1.5rem;
+	letter-spacing: .15rem;
+	line-height: 1;
+	padding: 0.6em 1em 0.6em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all .25s;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.btn:hover,
+div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
+	background-color: var(--color-alpha);
+	border-color: var(--color-alpha);
+	color: white;
+}
+
+button:before, button:after,
+input[type="button"]:before,
+input[type="button"]:after,
+input[type="reset"]:before,
+input[type="reset"]:after,
+input[type="submit"]:before,
+input[type="submit"]:after,
+.btn:before,
+.btn:after,
+div.wpforms-container-full .wpforms-form button[type="submit"]:before,
+div.wpforms-container-full .wpforms-form button[type="submit"]:after {
+	display: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/** search ***/
+.search-form {
+	display: flex;
+}
+
+.search-form .search-field {
+	border-radius: 0;
+	height: 100%;
+	line-height: 1rem;
+	padding: 1rem;
+}
+
+.search-form .search-submit {
+	border-radius: 0;
+}
+
+/* Blocks
+--------------------------------------------- */
+.gutenberg-single-post {
+	margin: 0 0 2rem;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+}
+
+.gutenberg-single-post .attachment-post-thumbnail {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	transition: all .25s;
+	width: 100%;
+}
+
+.gutenberg-single-post__overlay {
+	background: var(--color-beta);
+	color: white;
+	padding: 1rem;
+}
+
+@media (min-width: 768px) {
+	.gutenberg-single-post__overlay {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		align-items: center;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2rem;
+		text-align: center;
+	}
+}
+
+.gutenberg-single-post__title {
+	margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+	.gutenberg-single-post__title {
+		margin: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.gutenberg-single-post__link {
+		position: static;
+	}
+	.gutenberg-single-post__link:after {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		content: "";
+		background: transparent;
+	}
+	.gutenberg-single-post__link:before {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.gutenberg-single-post__content {
+		max-height: 0;
+		overflow: hidden;
+		transition: all .5s;
+	}
+}
+
+@media (min-width: 768px) {
+	.gutenberg-single-post:focus .gutenberg-single-post__overlay, .gutenberg-single-post:hover .gutenberg-single-post__overlay {
+		background: rgba(0, 0, 0, 0.9);
+	}
+	.gutenberg-single-post:focus .gutenberg-single-post__title, .gutenberg-single-post:hover .gutenberg-single-post__title {
+		border-bottom: 3px solid var(--color-gamma);
+	}
+	.gutenberg-single-post:focus .gutenberg-single-post__link:before, .gutenberg-single-post:hover .gutenberg-single-post__link:before {
+		background: var(--color-gamma);
+	}
+	.gutenberg-single-post:focus .attachment-post-thumbnail, .gutenberg-single-post:hover .attachment-post-thumbnail {
+		transform: scale(1.2, 1.2);
+	}
+	.gutenberg-single-post:focus .gutenberg-single-post__content, .gutenberg-single-post:hover .gutenberg-single-post__content {
+		max-height: 10rem;
+	}
+}
+
+/* Editor
+--------------------------------------------- */
+.block-editor-block-list__layout .wp-block-group {
+	border: 0.5em solid var(--color-gamma);
+	transition: all .25s;
+}
+
+.block-editor-block-list__layout .wp-block-group:hover {
+	border-style: dashed;
+}
+
+.block-editor-block-list__layout .wp-block-group__inner-container {
+	padding: 1em;
+}
+
+.acf-block-preview .gutenberg-single-post__link:after {
+	display: none;
+}
+
+/*# sourceMappingURL=editor.css.map */

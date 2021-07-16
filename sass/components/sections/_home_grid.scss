@@ -1,0 +1,132 @@
+.page-template-homepage {
+  .site-main {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+.home-grid {
+  margin: 0;
+  
+  @include breakpoint("md-up") {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  @include breakpoint("lg-up") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint("xxl-up") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  & > * {
+    background: var(--color-epsilon);
+    margin: 0;
+    padding: 1.5rem;
+  }
+
+  .alignwide {
+    grid-column: span 2;
+  }
+
+  .site-branding {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .custom-logo-link {
+    height: 12rem;
+    margin: 0 0 1rem;
+    width: 12rem;
+  }
+
+  .site-title a {
+    font-size: 3rem;
+    background: url(images/bg-main.jpg) -350px 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .main-navigation {
+    background: var(--color-delta);
+    opacity: .9;
+    padding: 0;
+
+    @include breakpoint("lg-up") {
+      grid-column: 3;
+    }
+
+    @include breakpoint("xxl-up") {
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 2;
+    }
+
+    .menu-main-menu-container,
+    .menu {
+      height: 100%;
+    }
+
+    .menu {
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 2rem;
+    }
+
+    li {
+      background: transparent;
+      width: 100%;
+    }
+
+    a {
+      color: var(--color-alpha);
+
+      &::after {
+        background: var(--color-alpha);
+      }
+    }
+
+    .icon {
+      fill: var(--color-alpha);
+    }
+  }
+
+  .gutenberg-single-post {
+    @include breakpoint("md-down") {
+      margin: 2rem 0;
+    }
+    padding: 0;
+  }
+
+  .hire-me {
+    @include breakpoint("md-up") {
+      grid-column: span 2;
+    }
+
+    @include breakpoint("lg-up") {
+      grid-column: 2 / span 2;
+    }
+
+    @include breakpoint("xxl-up") {
+      grid-column: auto;
+    }
+
+    .wp-block-group__inner-container {
+      margin: 0 auto;
+      max-width: 480px;
+    }
+
+    a:hover:before {
+      background: var(--color-alpha);
+    }
+  }
+}

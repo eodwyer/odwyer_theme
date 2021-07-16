@@ -1,10 +1,23 @@
+body,
+html {
+ height: 100%;
+}
+
 .site {
- display: grid;
- grid-template-columns: ($size__site-sidebar) auto;
- grid-template-areas:
-  "header header"
-  "sidebar main"
-  "footer footer";
+ background: url(images/bg-main.jpg) fixed;
+ background-size: cover;
+
+ @include breakpoint("md-up") {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 640px) 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+   "header header header"
+   "sidebar main gutter"
+   "footer footer footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+ }
 }
 
 .site-header {
@@ -16,8 +29,17 @@
  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.widget-area {
+.site-sidebar {
  grid-area: sidebar;
+
+ @include breakpoint("md-up") {
+    display: grid;
+    grid-template-columns: 1fr max(17rem);
+  }
+
+  &__inner {
+   grid-column: 2 / span 1;
+  }
 }
 
 .site-footer {

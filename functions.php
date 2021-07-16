@@ -100,6 +100,13 @@ if ( ! function_exists( 'odwyer_setup' ) ) :
     'flex-height' => true,
    )
   );
+
+  /**
+   * Add support for Gutenberg widths
+   *
+   */
+  add_theme_support( 'align-wide' );
+  add_theme_support( 'align-full' );
  }
 endif;
 add_action( 'after_setup_theme', 'odwyer_setup' );
@@ -175,3 +182,27 @@ require get_template_directory() . '/inc/customizer.php';
  * ACF fields
  */
 require get_template_directory() . '/inc/acf-fields.php';
+
+/**
+ * Editor Styles
+ */
+add_theme_support( 'editor-styles' );
+add_editor_style( 'editor.css' );
+
+
+/**
+ * Excerpts
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+   return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+  if ( ! is_single() ) {
+    $more = '...';
+  }
+ 
+   return $more;
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

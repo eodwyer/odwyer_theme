@@ -4,14 +4,25 @@
 
 /* Posts and pages
 --------------------------------------------- */
+@import "content/gutenberg";
 @import "content/posts-and-pages";
 
 /* Comments
 --------------------------------------------- */
 @import "comments/comments";
 
+
+/* Sections
+--------------------------------------------- */
+@import "sections/footer";
+@import "sections/header";
+@import "sections/home_grid";
+@import "sections/main";
+@import "sections/sidebar";
+
 /* Widgets
 --------------------------------------------- */
+@import "widgets/color-palette";
 @import "widgets/widgets";
 
 /* Media

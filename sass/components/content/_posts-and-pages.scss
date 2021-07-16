@@ -1,23 +1,67 @@
 .sticky {
-	display: block;
+ display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+.page .page,
+.page-content,
+.post {
+  background: var(--color-epsilon);
+ margin: 0 0 4rem;
+  padding: var(--side-pad);
+
+  .no-sidebar & {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .updated:not(.published) {
-	display: none;
+ display: none;
+}
+
+.page-header {
+  background: var(--color-epsilon);
+  border-bottom: 2px solid var(--color-beta);
+  padding: var(--side-pad);
+}
+
+.page-title {
+  margin: 0;
+}
+
+.entry-title {
+  margin-top: 1.5rem;
+}
+
+.post-thumbnail {
+  @include clear-link;
+  background: white;
+
+  img {
+    display: block;
+  }
+}
+
+.entry-meta {
+  margin-bottom: 1.5rem;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+ margin: 1.5em 0 0;
+}
+
+.edit-link {
+  margin: 0 1rem;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+ clear: both;
+ margin: 0 0 1.5em;
+}
+
+.entry-footer {
+  margin-bottom: 1rem;
 }

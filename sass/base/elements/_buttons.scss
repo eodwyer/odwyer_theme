@@ -1,21 +1,36 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+input[type="submit"],
+.btn,
+div.wpforms-container-full .wpforms-form button[type="submit"] {
+ @include heading-font;
+ border: 1px solid;
+ border-color: darken($color-gamma, 30);
+ border-radius: 3px;
+ background: var(--color-gamma);
+ color: var(--color-alpha);
+ font-size: 1.5rem;
+ letter-spacing: .15rem;
+ line-height: 1;
+ padding: 0.6em 1em 0.6em;
+ text-align: center;
+ text-transform: uppercase;
+ transition: all .25s;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
+ &:hover {
+  background-color: var(--color-alpha);
+  border-color: var(--color-alpha);
+  color: white;
+ }
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
+ &:active,
+ &:focus {
+  
+ }
+
+ &:before,
+ &:after {
+  display: none;
+ }
 }

@@ -1,0 +1,30 @@
+.p-0 {
+  padding: 0;
+}
+
+.clear-link {
+  @include clear-link;
+}
+
+$backgrounds: (
+  "alpha": $color-alpha,
+  "beta": $color-beta,
+  "gamma": $color-gamma,
+  "delta": $color-delta,
+  "epsilon": $color-epsilon
+);
+
+@each $name, $variable in $backgrounds {
+  .bg-#{$name} {
+    background: rgba($variable, .8);
+  }
+}
+
+
+
+
+
+
+
+
+
