@@ -106,15 +106,21 @@
  }
 
  .nav-links {
-  display: flex;
+  @include breakpoint("lg-up") {
+   display: flex;
+   justify-content: space-between;
+  }
  }
 
- .nav-previous {
-  flex: 1 0 50%;
+ .nav-subtitle {
+   font-weight: bold;
  }
 
  .nav-next {
-  text-align: end;
-  flex: 1 0 50%;
+  margin-top: 1rem;
+
+  @include breakpoint("lg-up") {
+   margin-top: 0;
+  }
  }
 }

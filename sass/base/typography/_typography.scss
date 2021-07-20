@@ -7,6 +7,7 @@ textarea {
  color: $color__text-main;
  font-family: $font__main;
  font-size: 1.25rem;
+  font-size: clamp(1rem, calc(0.8475rem + 0.6780vw), 1.25rem); 
  line-height: $font__line-height-body;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

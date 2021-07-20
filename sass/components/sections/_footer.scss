@@ -4,7 +4,15 @@
   opacity: .9;
   padding: var(--section-pad);
 
+  @include breakpoint("md-down") {
+    border-top: 1px solid var(--color-alpha);
+  }
+
   a {
     color: white;
+
+    @include breakpoint("md-down") {
+      margin-bottom: 1rem;
+    }
   }
 }

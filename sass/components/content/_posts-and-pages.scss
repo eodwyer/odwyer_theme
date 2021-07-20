@@ -2,8 +2,15 @@
  display: block;
 }
 
-.page .page,
-.page-content,
+.page-content {
+  background: var(--color-epsilon);
+}
+
+.page:not(body) {
+  background: var(--color-epsilon);
+  padding: var(--side-pad);
+}
+
 .post {
   background: var(--color-epsilon);
  margin: 0 0 4rem;
@@ -22,7 +29,7 @@
 
 .page-header {
   background: var(--color-epsilon);
-  border-bottom: 2px solid var(--color-beta);
+  margin-bottom: 2rem;
   padding: var(--side-pad);
 }
 
@@ -47,7 +54,6 @@
   margin-bottom: 1.5rem;
 }
 
-.page-content,
 .entry-content,
 .entry-summary {
  margin: 1.5em 0 0;

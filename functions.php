@@ -97,7 +97,7 @@ if ( ! function_exists( 'odwyer_setup' ) ) :
     'height'      => 250,
     'width'       => 250,
     'flex-width'  => true,
-    'flex-height' => true,
+    'flex-height' => true
    )
   );
 

@@ -1,112 +1,26 @@
 /* Blocks
 --------------------------------------------- */
-.gutenberg-single-post {
-  margin: 0 0 2rem;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
 
-  .attachment-post-thumbnail {
-    display: block;
-    height: 100%;
-    object-fit: cover;
-    transition: all .25s;
-    width: 100%;
-  }
-
-  &__overlay {
-    background: var(--color-beta);
-    color: white;
-    padding: 1rem;
-
-    @include breakpoint("md-up") {
-      @include overlay;
-      align-items: center;
-      background: rgba(0, 0, 0, .7);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem;
-      text-align: center;
-    }
-  }
-
-  &__title {
-    margin-top: 1rem;
-
-    @include breakpoint("md-up") {
-      margin: 0;
-    }
-  }
-
-  &__link {
-    @include breakpoint("md-up") {
-      position: static;
-
-      &:after {
-        @include overlay;
-        content: "";
-        background: transparent;
-      }
-
-      &:before {
-        display: none;
-      }
-    }
-  }
-
-  &__content {
-    @include breakpoint("md-up") {
-      max-height: 0;
-      overflow: hidden;
-      transition: all .5s;
-    }
-  }
-
-  &:focus,
-  &:hover {
-    @include breakpoint("md-up") {
-      .gutenberg-single-post__overlay {
-        background: rgba(0, 0, 0, .9);
-      }
-
-      .gutenberg-single-post__title {
-        border-bottom: 3px solid var(--color-gamma);
-      }
-
-      .gutenberg-single-post__link:before {
-        background: var(--color-gamma);
-      }
-
-      .attachment-post-thumbnail {
-        transform: scale(1.2, 1.2);
-      }
-
-      .gutenberg-single-post__content {
-        max-height: 10rem;
-      }
-    }
-  }     
-}
 
 /* Editor
 --------------------------------------------- */
-.block-editor-block-list__layout .wp-block-group {
-  border: .5em solid var(--color-gamma);
-  transition: all .25s;
+.block-editor-block-list__layout {
+  .wp-block-group {
+    border: .5em solid var(--color-gamma);
+    transition: all .25s;
 
-  &:hover {
-    border-style: dashed;
-  }
+    &:hover {
+      border-style: dashed;
+    }
 
-  &__inner-container {
-    padding: 1em;
+    &__inner-container {
+      padding: 1em;
+    }
   }
 }
 
 .acf-block-preview {
-  .gutenberg-single-post__link:after {
+  .post-content-card__link:after {
     display: none;
   }
 }

@@ -10,6 +10,7 @@ a {
   content: "";
   height: .25rem;
   left: 0;
+  overflow: hidden;
   position: absolute;
   width: 100%;
  }
@@ -27,11 +28,6 @@ a {
   z-index: 10;
  }
 
-
- &:visited {
-
- }
-
  &:hover,
  &:focus,
  &:active {
@@ -44,10 +40,24 @@ a {
 
  &:focus {
   outline: thin dotted;
+
+  &:before {
+   background: var(--color-gamma);
+  }
  }
 
  &:hover,
  &:active {
   outline: 0;
  }
+
+ // Label PDF links
+ &[href$=".pdf"]:after {
+  content: "PDF link";
+  text-indent: -100%;
+ }
+}
+
+.ab-item {
+ @include clear-link;
 }

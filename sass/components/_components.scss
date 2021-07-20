@@ -4,8 +4,9 @@
 
 /* Posts and pages
 --------------------------------------------- */
-@import "content/gutenberg";
 @import "content/posts-and-pages";
+@import "content/gutenberg";
+@import "content/post-content-card";
 
 /* Comments
 --------------------------------------------- */
@@ -16,7 +17,6 @@
 --------------------------------------------- */
 @import "sections/footer";
 @import "sections/header";
-@import "sections/home_grid";
 @import "sections/main";
 @import "sections/sidebar";
 

@@ -5,14 +5,19 @@
 	--amber: #FF7D00;
 	--middle-blue: #90ddf0;
 	--blanched-almond: #FFECD1;
-	--rich-black: #07393c;
 	--color-alpha: var(--rich-black-fogra-29);
 	--color-beta: var(--ming);
 	--color-gamma: var(--amber);
 	--color-delta: var(--middle-blue);
 	--color-epsilon: var(--blanched-almond);
-	--side-pad: 2rem;
-	--section-pad: 1rem;
+	--side-pad: 1.5rem;
+	--section-pad: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--side-pad: 2rem;
+	}
 }
 
 /* Typography
@@ -26,7 +31,8 @@ textarea {
 	color: var(--color-alpha);
 	font-family: "Martel", serif;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	font-size: clamp(1rem, calc(0.8475rem + 0.6780vw), 1.25rem);
+	line-height: 1.75;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
@@ -41,22 +47,37 @@ h6, .h6 {
 	font-weight: 400;
 	letter-spacing: 0.1rem;
 	clear: both;
+	line-height: 1.5;
 }
 
 h1, .h1 {
 	font-size: 4rem;
+	font-size: clamp(2.5rem, calc(1.5847rem + 4.0678vw), 4rem);
 }
 
 h2, .h2 {
 	font-size: 2.75rem;
+	font-size: clamp(2rem, calc(1.5424rem + 2.0339vw), 2.75rem);
 }
 
 h3, .h3 {
 	font-size: 2.5rem;
+	font-size: clamp(1.75rem, calc(1.2924rem + 2.0339vw), 2.5rem);
 }
 
 h4, .h4 {
 	font-size: 2.25rem;
+	font-size: clamp(1.3rem, calc( 0.7203rem + 2.5763vw), 2.25rem);
+}
+
+h5, .h5 {
+	font-size: 2rem;
+	font-size: clamp(1.1rem, calc(0.4898rem + 2.7119vw), 2.1rem);
+}
+
+h6, .h6 {
+	font-size: 2rem;
+	font-size: clamp(1rem, calc(0.3898rem + 2.7119vw), 2rem);
 }
 
 p {
@@ -126,7 +147,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 1em;
+	margin: 0 0 1.5em 1.25em;
 	padding-left: 0;
 }
 
@@ -193,6 +214,7 @@ a:after {
 	content: "";
 	height: .25rem;
 	left: 0;
+	overflow: hidden;
 	position: absolute;
 	width: 100%;
 }
@@ -222,8 +244,25 @@ a:focus {
 	outline: thin dotted;
 }
 
+a:focus:before {
+	background: var(--color-gamma);
+}
+
 a:hover, a:active {
 	outline: 0;
+}
+
+a[href$=".pdf"]:after {
+	content: "PDF link";
+	text-indent: -100%;
+}
+
+.ab-item {
+	text-decoration: none;
+}
+
+.ab-item:after, .ab-item:before {
+	display: none;
 }
 
 /* Forms
@@ -318,7 +357,9 @@ textarea:focus {
 }
 
 select {
+	background: white;
 	border: 1px solid #ccc;
+	padding: 1rem;
 }
 
 textarea {
@@ -343,14 +384,35 @@ textarea {
 
 /* Blocks
 --------------------------------------------- */
-.gutenberg-single-post {
+/* Editor
+--------------------------------------------- */
+.block-editor-block-list__layout .wp-block-group {
+	border: 0.5em solid var(--color-gamma);
+	transition: all .25s;
+}
+
+.block-editor-block-list__layout .wp-block-group:hover {
+	border-style: dashed;
+}
+
+.block-editor-block-list__layout .wp-block-group__inner-container {
+	padding: 1em;
+}
+
+.acf-block-preview .post-content-card__link:after {
+	display: none;
+}
+
+.post-content-card {
+	background: transparent;
 	margin: 0 0 2rem;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
 }
 
-.gutenberg-single-post .attachment-post-thumbnail {
+.post-content-card__img-fallback,
+.post-content-card .attachment-post-thumbnail {
 	display: block;
 	height: 100%;
 	object-fit: cover;
@@ -358,14 +420,20 @@ textarea {
 	width: 100%;
 }
 
-.gutenberg-single-post__overlay {
+@media (min-width: 768px) {
+	.post-content-card__img-fallback {
+		min-height: 400px;
+	}
+}
+
+.post-content-card__overlay {
 	background: var(--color-beta);
 	color: white;
 	padding: 1rem;
 }
 
 @media (min-width: 768px) {
-	.gutenberg-single-post__overlay {
+	.post-content-card__overlay {
 		height: 100%;
 		left: 0;
 		position: absolute;
@@ -382,21 +450,21 @@ textarea {
 	}
 }
 
-.gutenberg-single-post__title {
+.post-content-card__title {
 	margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
-	.gutenberg-single-post__title {
+	.post-content-card__title {
 		margin: 0;
 	}
 }
 
 @media (min-width: 768px) {
-	.gutenberg-single-post__link {
+	.post-content-card__link {
 		position: static;
 	}
-	.gutenberg-single-post__link:after {
+	.post-content-card__link:after {
 		height: 100%;
 		left: 0;
 		position: absolute;
@@ -405,13 +473,13 @@ textarea {
 		content: "";
 		background: transparent;
 	}
-	.gutenberg-single-post__link:before {
+	.post-content-card__link:before {
 		display: none;
 	}
 }
 
 @media (min-width: 768px) {
-	.gutenberg-single-post__content {
+	.post-content-card__content {
 		max-height: 0;
 		overflow: hidden;
 		transition: all .5s;
@@ -419,40 +487,21 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.gutenberg-single-post:focus .gutenberg-single-post__overlay, .gutenberg-single-post:hover .gutenberg-single-post__overlay {
+	.post-content-card:focus .post-content-card__overlay, .post-content-card:focus-within .post-content-card__overlay, .post-content-card:hover .post-content-card__overlay {
 		background: rgba(0, 0, 0, 0.9);
 	}
-	.gutenberg-single-post:focus .gutenberg-single-post__title, .gutenberg-single-post:hover .gutenberg-single-post__title {
+	.post-content-card:focus .post-content-card__title, .post-content-card:focus-within .post-content-card__title, .post-content-card:hover .post-content-card__title {
 		border-bottom: 3px solid var(--color-gamma);
 	}
-	.gutenberg-single-post:focus .gutenberg-single-post__link:before, .gutenberg-single-post:hover .gutenberg-single-post__link:before {
+	.post-content-card:focus .post-content-card__link:before, .post-content-card:focus-within .post-content-card__link:before, .post-content-card:hover .post-content-card__link:before {
 		background: var(--color-gamma);
 	}
-	.gutenberg-single-post:focus .attachment-post-thumbnail, .gutenberg-single-post:hover .attachment-post-thumbnail {
+	.post-content-card:focus .attachment-post-thumbnail, .post-content-card:focus-within .attachment-post-thumbnail, .post-content-card:hover .attachment-post-thumbnail {
 		transform: scale(1.2, 1.2);
 	}
-	.gutenberg-single-post:focus .gutenberg-single-post__content, .gutenberg-single-post:hover .gutenberg-single-post__content {
+	.post-content-card:focus .post-content-card__content, .post-content-card:focus-within .post-content-card__content, .post-content-card:hover .post-content-card__content {
 		max-height: 10rem;
 	}
-}
-
-/* Editor
---------------------------------------------- */
-.block-editor-block-list__layout .wp-block-group {
-	border: 0.5em solid var(--color-gamma);
-	transition: all .25s;
-}
-
-.block-editor-block-list__layout .wp-block-group:hover {
-	border-style: dashed;
-}
-
-.block-editor-block-list__layout .wp-block-group__inner-container {
-	padding: 1em;
-}
-
-.acf-block-preview .gutenberg-single-post__link:after {
-	display: none;
 }
 
 /*# sourceMappingURL=editor.css.map */

@@ -39,8 +39,8 @@ get_header();
               <?php $img=get_sub_field('thumbnail'); ?>
               <img 
                 class="portfolio__item__img" 
-                src='<?php echo $img['sizes']['large']; ?>' 
-                alt='' 
+                src="<?php echo $img['sizes']['large']; ?>"
+                alt="" 
                 height="333"
                 width="500" 
               />
@@ -51,7 +51,7 @@ get_header();
 
               </div>
               <a class='portfolio__item__btn btn' href='<?php the_sub_field('site_url'); ?>' target='_blank' >
-                View Live Site
+                View <span class="screen-reader-text"><?php the_sub_field('title'); ?></span> Live Site
               </a>
               
             </div>

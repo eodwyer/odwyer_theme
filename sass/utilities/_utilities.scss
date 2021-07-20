@@ -16,15 +16,6 @@ $backgrounds: (
 
 @each $name, $variable in $backgrounds {
   .bg-#{$name} {
-    background: rgba($variable, .8);
+    background: rgba($variable, .8) !important;
   }
 }
-
-
-
-
-
-
-
-
-

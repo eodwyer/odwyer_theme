@@ -20,10 +20,7 @@
     ?>
    </a>
    <span class="sep"> | </span>
-    <?php
-    /* translators: 1: Theme name, 2: Theme author. */
-    printf( esc_html__( 'Theme: %1$s by %2$s.', 'odwyer' ), 'odwyer', '<a href="http://eoinodwyer.com">Eoin O\'Dwyer</a>' );
-    ?>
+    Background by <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a>
   </div><!-- .site-info -->
  </footer><!-- #colophon -->
 </div><!-- #page -->
