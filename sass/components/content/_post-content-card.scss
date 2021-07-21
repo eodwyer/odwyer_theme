@@ -5,7 +5,7 @@
   padding: 0;
   position: relative;
 
-  &__img-fallback, 
+  &__img-fallback,
   .attachment-post-thumbnail {
     display: block;
     height: 100%;
@@ -15,6 +15,7 @@
   }
 
   &__img-fallback {
+    
     @include breakpoint("md-up") {
       min-height: 400px;
     }
@@ -26,6 +27,7 @@
     padding: 1rem;
 
     @include breakpoint("md-up") {
+      
       @include overlay;
       align-items: center;
       background: rgba(0, 0, 0, .7);
@@ -47,22 +49,25 @@
   }
 
   &__link {
+    
     @include breakpoint("md-up") {
       position: static;
 
-      &:after {
+      &::after {
+        
         @include overlay;
         content: "";
         background: transparent;
       }
 
-      &:before {
+      &::before {
         display: none;
       }
     }
   }
 
   &__content {
+    
     @include breakpoint("md-up") {
       max-height: 0;
       overflow: hidden;
@@ -73,7 +78,9 @@
   &:focus,
   &:focus-within,
   &:hover {
+    
     @include breakpoint("md-up") {
+      
       .post-content-card__overlay {
         background: rgba(0, 0, 0, .9);
       }
@@ -82,7 +89,7 @@
         border-bottom: 3px solid var(--color-gamma);
       }
 
-      .post-content-card__link:before {
+      .post-content-card__link::before {
         background: var(--color-gamma);
       }
 
@@ -94,5 +101,5 @@
         max-height: 10rem;
       }
     }
-  }     
+  }
 }

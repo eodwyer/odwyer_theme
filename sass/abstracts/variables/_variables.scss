@@ -3,29 +3,28 @@
   // https://coolors.co/001524-15616d-ffecd1-ff7d00-78290f
   --rich-black-fogra-29: #001524;
   --ming: #2c666e;
-  --amber: #FF7D00;
+  --amber: #ff7d00;
   --middle-blue: #90ddf0;
-  --blanched-almond: #FFECD1;
-
-  --color-alpha: var(--rich-black-fogra-29); 
+  --blanched-almond: #ffecd1;
+  --color-alpha: var(--rich-black-fogra-29);
   --color-beta: var(--ming);
   --color-gamma: var(--amber);
   --color-delta: var(--middle-blue);
   --color-epsilon: var(--blanched-almond);
 
-  --side-pad: 1.5rem; 
+  --side-pad: 1.5rem;
   --section-pad: 1.5rem;
 
   @include breakpoint("md-up") {
-    --side-pad: 2rem; 
+    --side-pad: 2rem;
   }
 }
 
 $color-alpha: #001524;
 $color-beta: #2c666e;
-$color-gamma: #FF7D00;
+$color-gamma: #ff7d00;
 $color-delta: #90ddf0;
-$color-epsilon: #FFECD1;
+$color-epsilon: #ffecd1;
 
 $color__background-body: #fff;
 $color__background-screen: var(--color-epsilon);
@@ -47,8 +46,8 @@ $color__border-abbr: #666;
 
 // Typography
 // stylelint-disable value-keyword-case
-$font__headings: 'Anton', sans-serif;;
-$font__main: 'Martel', serif;// "Georgia", serif;
+$font__headings: "Anton", sans-serif;
+$font__main: "Martel", serif;// "Georgia", serif;
 // stylelint-enable value-keyword-case
 $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;

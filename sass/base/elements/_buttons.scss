@@ -4,33 +4,29 @@ input[type="reset"],
 input[type="submit"],
 .btn,
 div.wpforms-container-full .wpforms-form button[type="submit"] {
- @include heading-font;
- border: 1px solid;
- border-color: darken($color-gamma, 30);
- border-radius: 3px;
- background: var(--color-gamma);
- color: var(--color-alpha);
- font-size: 1.5rem;
- letter-spacing: .15rem;
- line-height: 1;
- padding: 0.6em 1em 0.6em;
- text-align: center;
- text-transform: uppercase;
- transition: all .25s;
-
- &:hover {
-  background-color: var(--color-alpha);
-  border-color: var(--color-alpha);
-  color: white;
- }
-
- &:active,
- &:focus {
   
- }
+  @include heading-font;
+  border: 1px solid;
+  border-color: darken($color-gamma, 30);
+  border-radius: 3px;
+  background: var(--color-gamma);
+  color: var(--color-alpha);
+  font-size: 1.5rem;
+  letter-spacing: .15rem;
+  line-height: 1;
+  padding: .6em 1em .6em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .25s;
 
- &:before,
- &:after {
-  display: none;
- }
+  &:hover {
+    background-color: var(--color-alpha);
+    border-color: var(--color-alpha);
+    color: white;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
 }

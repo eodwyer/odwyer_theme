@@ -5,6 +5,7 @@
 /* Editor
 --------------------------------------------- */
 .block-editor-block-list__layout {
+
   .wp-block-group {
     border: .5em solid var(--color-gamma);
     transition: all .25s;
@@ -20,7 +21,8 @@
 }
 
 .acf-block-preview {
-  .post-content-card__link:after {
+
+  .post-content-card__link::after {
     display: none;
   }
 }

@@ -1,7 +1,7 @@
 .site-header {
   align-items: center;
   background: white;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
 
@@ -21,13 +21,14 @@
   @include breakpoint("md-up") {
     justify-content: flex-start;
     flex: 1 0 auto;
-    flex-direction: row;  
+    flex-direction: row;
     margin-right: 2rem;
     padding: 1rem 2rem 1rem 1rem;
   }
 }
 
 .custom-logo-link {
+
   @include clear-link;
   border: .25rem solid var(--color-beta);
   border-radius: 50%;
@@ -54,9 +55,10 @@
   margin: 0;
 
   a {
-    @include clear-link;
     display: block;
     font-size: 2rem;
+
+    @include clear-link;
   }
 }
 

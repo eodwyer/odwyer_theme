@@ -1,13 +1,13 @@
 // Center block
 @mixin center-block {
- display: block;
- margin-left: auto;
- margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
- width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+  width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
 @mixin overlay {
@@ -27,23 +27,23 @@
 @mixin clear-link {
   text-decoration: none;
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     display: none;
   }
 }
 
 $breakpoints: (
-  'sm-up':  ( min-width:  640px ),
-  'sm-down':  ( max-width:  639px ),
-  'md-up':  ( min-width:  768px ),
-  'md-down':  ( max-width:  767px ),
-  'lg-up': ( min-width:  992px ),
-  'lg-down': ( max-width:  991px ),
-  'xl-up':  ( min-width: 1200px ),
-  'xl-down':  ( max-width: 1159px ),
-  'xxl-up': ( min-width:  1400px ),
-  'xxl-down': ( max-width:  1399px ),
+  "sm-up":  ( min-width:  640px ),
+  "sm-down":  ( max-width:  639px ),
+  "md-up":  ( min-width:  768px ),
+  "md-down":  ( max-width:  767px ),
+  "lg-up": ( min-width:  992px ),
+  "lg-down": ( max-width:  991px ),
+  "xl-up":  ( min-width: 1200px ),
+  "xl-down":  ( max-width: 1159px ),
+  "xxl-up": ( min-width:  1400px ),
+  "xxl-down": ( max-width:  1399px ),
 ) !default;
 
 /// Mixin to manage responsive breakpoints
@@ -61,7 +61,8 @@ $breakpoints: (
 
   // If the key doesn't exist in the map
   @else {
+
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }

@@ -1,3 +1,7 @@
+textarea {
+  width: 100%;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -14,24 +18,20 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
- color: $color__text-input;
- border: 1px solid $color__border-input;
- border-radius: 3px;
- padding: 3px;
+  color: $color__text-input;
+  border: 1px solid $color__border-input;
+  border-radius: 3px;
+  padding: 3px;
 
- &:focus {
-  color: $color__text-input-focus;
- }
+  &:focus {
+    color: $color__text-input-focus;
+  }
 }
 
 select {
   background: white;
- border: 1px solid $color__border-input;
+  border: 1px solid $color__border-input;
   padding: 1rem;
-}
-
-textarea {
- width: 100%;
 }
 
 
@@ -43,7 +43,7 @@ textarea {
   .search-field {
     border-radius: 0;
     height: 100%;
-    line-height: 1rem;
+    line-height: 1;
     padding: 1rem;
   }
 

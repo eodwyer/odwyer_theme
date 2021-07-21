@@ -1,63 +1,64 @@
 a {
- color: inherit;
- display: inline-block;
- position: relative;
- text-decoration: none;
-
- &:after {
-  background: var(--color-delta);
-  bottom: .1em;
-  content: "";
-  height: .25rem;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
- }
-
- &:before {
-  background: var(--color-gamma);
-  bottom: .1em;
-  content: "";
-  height: .25rem;
-  left: 0;
-  max-width: 0;
-  position: absolute;
-  transition: all .5s;
-  width: 100%;
-  z-index: 10;
- }
-
- &:hover,
- &:focus,
- &:active {
   color: inherit;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
 
-  &:before {
-   max-width: 100%;
+  &::after {
+    background: var(--color-delta);
+    bottom: .1em;
+    content: "";
+    height: .25rem;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
   }
- }
 
- &:focus {
-  outline: thin dotted;
-
-  &:before {
-   background: var(--color-gamma);
+  &::before {
+    background: var(--color-gamma);
+    bottom: .1em;
+    content: "";
+    height: .25rem;
+    left: 0;
+    max-width: 0;
+    position: absolute;
+    transition: all .5s;
+    width: 100%;
+    z-index: 10;
   }
- }
 
- &:hover,
- &:active {
-  outline: 0;
- }
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
 
- // Label PDF links
- &[href$=".pdf"]:after {
-  content: "PDF link";
-  text-indent: -100%;
- }
+    &::before {
+      max-width: 100%;
+    }
+  }
+
+  &:focus {
+    outline: thin dotted;
+
+    &::before {
+      background: var(--color-gamma);
+    }
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+
+  // Label PDF links
+  &[href$=".pdf"]::after {
+    content: "PDF link";
+    text-indent: -100%;
+  }
 }
 
 .ab-item {
- @include clear-link;
+  
+  @include clear-link;
 }

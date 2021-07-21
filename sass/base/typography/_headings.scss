@@ -1,42 +1,55 @@
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  
   @include heading-font;
- clear: both;
+  clear: both;
   line-height: $font__line-height-headings;
 }
 
 // Clamp values calculated using CSS Tricks calculator: 
 // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
-h1, .h1 {
+h1,
+.h1 {
   font-size: 4rem;
-  font-size: clamp(2.5rem, calc(1.5847rem + 4.0678vw), 4rem); 
+  font-size: clamp(2.5rem, calc(1.5847rem + 4.0678vw), 4rem);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 2.75rem;
-  font-size: clamp(2rem, calc(1.5424rem + 2.0339vw), 2.75rem); 
+  font-size: clamp(2rem, calc(1.5424rem + 2.0339vw), 2.75rem);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 2.5rem;
-  font-size: clamp(1.75rem, calc(1.2924rem + 2.0339vw), 2.5rem); 
+  font-size: clamp(1.75rem, calc(1.2924rem + 2.0339vw), 2.5rem);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 2.25rem;
-  font-size: clamp(1.3rem, calc( 0.7203rem + 2.5763vw), 2.25rem); 
+  font-size: clamp(1.3rem, calc(.7203rem + 2.5763vw), 2.25rem);
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 2rem;
-  font-size: clamp(1.1rem, calc(0.4898rem + 2.7119vw), 2.1rem); 
+  font-size: clamp(1.1rem, calc(.4898rem + 2.7119vw), 2.1rem);
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 2rem;
-  font-size: clamp(1rem, calc(0.3898rem + 2.7119vw), 2rem); 
+  font-size: clamp(1rem, calc(.3898rem + 2.7119vw), 2rem);
 }

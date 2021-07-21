@@ -1,5 +1,5 @@
 .sticky {
- display: block;
+  display: block;
 }
 
 .page-content {
@@ -13,7 +13,7 @@
 
 .post {
   background: var(--color-epsilon);
- margin: 0 0 4rem;
+  margin: 0 0 4rem;
   padding: var(--side-pad);
 
   .no-sidebar & {
@@ -24,7 +24,7 @@
 }
 
 .updated:not(.published) {
- display: none;
+  display: none;
 }
 
 .page-header {
@@ -42,8 +42,10 @@
 }
 
 .post-thumbnail {
-  @include clear-link;
   background: white;
+
+  @include clear-link;
+ 
 
   img {
     display: block;
@@ -56,7 +58,7 @@
 
 .entry-content,
 .entry-summary {
- margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .edit-link {
@@ -64,8 +66,8 @@
 }
 
 .page-links {
- clear: both;
- margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 .entry-footer {

@@ -1,7 +1,8 @@
 .page-template-homepage {
+  
   .site {
     background-size: cover;
-    background-position: top
+    background-position: top;
   }
 
   .site-main {
@@ -116,6 +117,7 @@
   }
 
   .gutenberg-single-post {
+    
     @include breakpoint("md-down") {
       margin: 2rem 0;
     }
@@ -123,6 +125,7 @@
   }
 
   .hire-me {
+    
     @include breakpoint("md-up") {
       grid-column: span 2;
     }
@@ -142,7 +145,8 @@
 
     a:focus,
     a:hover {
-      &:before {
+      
+      &::before {
         background: var(--color-alpha);
       }
     }
