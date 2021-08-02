@@ -1614,6 +1614,12 @@ html {
 	text-align: center;
 }
 
+@media (max-width: 767px) {
+	.home-grid .site-branding {
+		padding-top: 1rem;
+	}
+}
+
 .home-grid .custom-logo-link {
 	border-color: var(--color-gamma);
 	height: 12rem;

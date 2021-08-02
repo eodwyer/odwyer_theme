@@ -4,7 +4,7 @@ Hi! This is the theme for my website. It's based off a starter theme called `_s`
 
 ## Dependencies
 This theme requires the [Advanced Custom Fields](https://www.advancedcustomfields.com/),
-and Menu Icons plugins.
+and a Menu Icons plugin.
 
 
 ### Setup
