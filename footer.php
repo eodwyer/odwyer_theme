@@ -20,7 +20,8 @@
     ?>
    </a>
    <span class="sep"> | </span>
-    Background by <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a>
+   Background by <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a>
+   <a rel="me" href="https://mastodon.social/@Vinculum"></a>
   </div><!-- .site-info -->
  </footer><!-- #colophon -->
 </div><!-- #page -->
