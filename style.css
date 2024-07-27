@@ -501,6 +501,15 @@ pre {
 	padding: 1.6em;
 }
 
+p > code {
+	background: var(--color-delta);
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.2;
+	max-width: 100%;
+	overflow: auto;
+	padding: .25rem .5rem;
+}
+
 code,
 kbd,
 tt,
@@ -522,6 +531,11 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+figcaption {
+	font-size: 1rem;
+	font-style: italic;
 }
 
 /* Elements
@@ -1831,3 +1845,5 @@ html {
 .portfolio__item:hover .portfolio__item__img {
 	filter: grayscale(0);
 }
+
+/*# sourceMappingURL=style.css.map */

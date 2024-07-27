@@ -2,9 +2,9 @@
 :root {
 	--rich-black-fogra-29: #001524;
 	--ming: #2c666e;
-	--amber: #FF7D00;
+	--amber: #ff7d00;
 	--middle-blue: #90ddf0;
-	--blanched-almond: #FFECD1;
+	--blanched-almond: #ffecd1;
 	--color-alpha: var(--rich-black-fogra-29);
 	--color-beta: var(--ming);
 	--color-gamma: var(--amber);
@@ -31,18 +31,24 @@ textarea {
 	color: var(--color-alpha);
 	font-family: "Martel", serif;
 	font-size: 1.25rem;
-	font-size: clamp(1rem, calc(0.8475rem + 0.6780vw), 1.25rem);
+	font-size: clamp(1rem, calc(.8475rem + .678vw), 1.25rem);
 	line-height: 1.75;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
 	font-family: "Anton", sans-serif;
 	font-weight: 400;
 	letter-spacing: 0.1rem;
@@ -50,34 +56,40 @@ h6, .h6 {
 	line-height: 1.5;
 }
 
-h1, .h1 {
+h1,
+.h1 {
 	font-size: 4rem;
 	font-size: clamp(2.5rem, calc(1.5847rem + 4.0678vw), 4rem);
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font-size: 2.75rem;
 	font-size: clamp(2rem, calc(1.5424rem + 2.0339vw), 2.75rem);
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 2.5rem;
 	font-size: clamp(1.75rem, calc(1.2924rem + 2.0339vw), 2.5rem);
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	font-size: 2.25rem;
-	font-size: clamp(1.3rem, calc( 0.7203rem + 2.5763vw), 2.25rem);
+	font-size: clamp(1.3rem, calc(.7203rem + 2.5763vw), 2.25rem);
 }
 
-h5, .h5 {
+h5,
+.h5 {
 	font-size: 2rem;
-	font-size: clamp(1.1rem, calc(0.4898rem + 2.7119vw), 2.1rem);
+	font-size: clamp(1.1rem, calc(.4898rem + 2.7119vw), 2.1rem);
 }
 
-h6, .h6 {
+h6,
+.h6 {
 	font-size: 2rem;
-	font-size: clamp(1rem, calc(0.3898rem + 2.7119vw), 2rem);
+	font-size: clamp(1rem, calc(.3898rem + 2.7119vw), 2rem);
 }
 
 p {
@@ -109,6 +121,15 @@ pre {
 	padding: 1.6em;
 }
 
+p > code {
+	background: var(--color-delta);
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.2;
+	max-width: 100%;
+	overflow: auto;
+	padding: .25rem .5rem;
+}
+
 code,
 kbd,
 tt,
@@ -130,6 +151,11 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+figcaption {
+	font-size: 1rem;
+	font-style: italic;
 }
 
 /* Elements
@@ -208,7 +234,7 @@ a {
 	text-decoration: none;
 }
 
-a:after {
+a::after {
 	background: var(--color-delta);
 	bottom: .1em;
 	content: "";
@@ -219,7 +245,7 @@ a:after {
 	width: 100%;
 }
 
-a:before {
+a::before {
 	background: var(--color-gamma);
 	bottom: .1em;
 	content: "";
@@ -236,7 +262,7 @@ a:hover, a:focus, a:active {
 	color: inherit;
 }
 
-a:hover:before, a:focus:before, a:active:before {
+a:hover::before, a:focus::before, a:active::before {
 	max-width: 100%;
 }
 
@@ -244,7 +270,7 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:focus:before {
+a:focus::before {
 	background: var(--color-gamma);
 }
 
@@ -252,7 +278,7 @@ a:hover, a:active {
 	outline: 0;
 }
 
-a[href$=".pdf"]:after {
+a[href$=".pdf"]::after {
 	content: "PDF link";
 	text-indent: -100%;
 }
@@ -261,7 +287,7 @@ a[href$=".pdf"]:after {
 	text-decoration: none;
 }
 
-.ab-item:after, .ab-item:before {
+.ab-item::after, .ab-item::before {
 	display: none;
 }
 
@@ -284,7 +310,7 @@ div.wpforms-container-full .wpforms-form button[type="submit"] {
 	font-size: 1.5rem;
 	letter-spacing: .15rem;
 	line-height: 1;
-	padding: 0.6em 1em 0.6em;
+	padding: .6em 1em .6em;
 	text-align: center;
 	text-transform: uppercase;
 	transition: all .25s;
@@ -301,18 +327,22 @@ div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
 	color: white;
 }
 
-button:before, button:after,
-input[type="button"]:before,
-input[type="button"]:after,
-input[type="reset"]:before,
-input[type="reset"]:after,
-input[type="submit"]:before,
-input[type="submit"]:after,
-.btn:before,
-.btn:after,
-div.wpforms-container-full .wpforms-form button[type="submit"]:before,
-div.wpforms-container-full .wpforms-form button[type="submit"]:after {
+button::before, button::after,
+input[type="button"]::before,
+input[type="button"]::after,
+input[type="reset"]::before,
+input[type="reset"]::after,
+input[type="submit"]::before,
+input[type="submit"]::after,
+.btn::before,
+.btn::after,
+div.wpforms-container-full .wpforms-form button[type="submit"]::before,
+div.wpforms-container-full .wpforms-form button[type="submit"]::after {
 	display: none;
+}
+
+textarea {
+	width: 100%;
 }
 
 input[type="text"],
@@ -362,10 +392,6 @@ select {
 	padding: 1rem;
 }
 
-textarea {
-	width: 100%;
-}
-
 /** search ***/
 .search-form {
 	display: flex;
@@ -374,7 +400,7 @@ textarea {
 .search-form .search-field {
 	border-radius: 0;
 	height: 100%;
-	line-height: 1rem;
+	line-height: 1;
 	padding: 1rem;
 }
 
@@ -399,7 +425,7 @@ textarea {
 	padding: 1em;
 }
 
-.acf-block-preview .post-content-card__link:after {
+.acf-block-preview .post-content-card__link::after {
 	display: none;
 }
 
@@ -464,7 +490,7 @@ textarea {
 	.post-content-card__link {
 		position: static;
 	}
-	.post-content-card__link:after {
+	.post-content-card__link::after {
 		height: 100%;
 		left: 0;
 		position: absolute;
@@ -473,7 +499,7 @@ textarea {
 		content: "";
 		background: transparent;
 	}
-	.post-content-card__link:before {
+	.post-content-card__link::before {
 		display: none;
 	}
 }
@@ -493,7 +519,7 @@ textarea {
 	.post-content-card:focus .post-content-card__title, .post-content-card:focus-within .post-content-card__title, .post-content-card:hover .post-content-card__title {
 		border-bottom: 3px solid var(--color-gamma);
 	}
-	.post-content-card:focus .post-content-card__link:before, .post-content-card:focus-within .post-content-card__link:before, .post-content-card:hover .post-content-card__link:before {
+	.post-content-card:focus .post-content-card__link::before, .post-content-card:focus-within .post-content-card__link::before, .post-content-card:hover .post-content-card__link::before {
 		background: var(--color-gamma);
 	}
 	.post-content-card:focus .attachment-post-thumbnail, .post-content-card:focus-within .attachment-post-thumbnail, .post-content-card:hover .attachment-post-thumbnail {
