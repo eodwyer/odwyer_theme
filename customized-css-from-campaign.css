@@ -1,0 +1,29 @@
+
+.election-post {
+	grid-row: 1 / span 2;
+}
+
+/* running for office post */
+:root {
+	--color-gamma: #009A44;
+}
+/* .postid-499 .site {
+	background: linear-gradient(180deg, rgba(0,154,68,1) 0%, rgba(7,102,81,1) 100%);
+	background-attachment:fixed;
+}
+
+.postid-499 .post {
+	background: white;
+}
+
+.postid-499 .site-sidebar,
+.postid-499 .site-footer,
+.postid-499 .site-header,
+.postid-499 .entry-footer {
+	display: none;
+}
+
+
+.postid-499 .post-navigation {
+	display: none;
+} */
