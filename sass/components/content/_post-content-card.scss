@@ -41,6 +41,7 @@
   }
 
   &__title {
+    line-height: 1.2;
     margin-top: 1rem;
 
     @include breakpoint("md-up") {
@@ -87,6 +88,8 @@
 
       .post-content-card__title {
         border-bottom: 3px solid var(--color-gamma);
+        margin-bottom: 1rem;
+        padding-bottom: 8px;
       }
 
       .post-content-card__link::before {
