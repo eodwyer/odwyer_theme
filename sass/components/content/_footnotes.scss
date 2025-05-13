@@ -1,0 +1,19 @@
+/***** Footnotes  **************/
+
+.fn a {
+ color: var(--color-gamma);
+  font-weight: bold;
+  font-size: 1rem;
+  background: black;
+  padding: .1rem .3rem;
+  line-height: 1;
+ outline: none;
+}
+
+.fn a:before {
+ display:none;
+}
+
+.fn a:after {
+ display:none;
+}

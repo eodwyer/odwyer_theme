@@ -456,8 +456,14 @@ h2,
 
 h3, .h3 {
 	font-size: 2.5rem;
-	font-size: clamp(1.75rem, calc(1.2924rem + 1.0339vw), 1.5rem);
-	margin-bottom: .25em;
+	font-size: clamp(1.75rem, calc(1.2924rem + 2.0339vw), 2rem);
+	margin-bottom: .5em;
+	text-transform: uppercase;
+}
+
+h3 + p,
+.h3 + p {
+	margin-top: 0;
 }
 
 h4,
@@ -1012,6 +1018,25 @@ html {
 
 /* Posts and pages
 --------------------------------------------- */
+/***** Footnotes  **************/
+.fn a {
+	color: var(--color-gamma);
+	font-weight: bold;
+	font-size: 1rem;
+	background: black;
+	padding: .1rem .3rem;
+	line-height: 1;
+	outline: none;
+}
+
+.fn a:before {
+	display: none;
+}
+
+.fn a:after {
+	display: none;
+}
+
 .sticky {
 	display: block;
 }
@@ -1056,7 +1081,6 @@ html {
 }
 
 .post-thumbnail {
-	background: white;
 	text-decoration: none;
 }
 
@@ -1066,6 +1090,7 @@ html {
 
 .post-thumbnail img {
 	display: block;
+	margin: 0 auto;
 }
 
 .entry-meta {
@@ -1092,6 +1117,54 @@ html {
 
 /* Blocks
 --------------------------------------------- */
+.wp-block-button__link:before,
+.wp-block-button__link:after {
+	display: none;
+}
+
+.wp-element-caption {
+	font-size: .8rem;
+	font-style: italic;
+}
+
+.wp-block-quote {
+	background-size: 2rem;
+	border-bottom: 1px solid var(--color-gamma);
+	border-top: 1px solid var(--color-gamma);
+	margin: 0 0 2rem;
+	padding: 2.5rem 1rem 1rem;
+	position: relative;
+}
+
+.wp-block-quote:before {
+	background: url("./images/quote.svg") 0 0 no-repeat;
+	background-size: cover;
+	content: "";
+	display: block;
+	height: 2rem;
+	left: 0;
+	position: absolute;
+	top: .25rem;
+	transform: rotate(180deg);
+	width: 2rem;
+}
+
+.wp-block-quote:after {
+	background: url("./images/quote.svg") right 92% no-repeat;
+	background-size: cover;
+	bottom: .25rem;
+	display: block;
+	content: "";
+	height: 2rem;
+	position: absolute;
+	right: 0;
+	width: 2rem;
+}
+
+.wp-block-quote p:last-child {
+	margin-bottom: 0;
+}
+
 /* Editor
 --------------------------------------------- */
 .block-editor-block-list__layout .wp-block-group {
@@ -1123,6 +1196,7 @@ html {
 .post-content-card .attachment-post-thumbnail {
 	display: block;
 	height: 100%;
+	max-height: 400px;
 	object-fit: cover;
 	transition: all .25s;
 	width: 100%;

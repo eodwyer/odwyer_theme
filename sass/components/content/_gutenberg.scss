@@ -1,5 +1,54 @@
 /* Blocks
 --------------------------------------------- */
+.wp-block-button__link:before,
+.wp-block-button__link:after {
+  display: none;
+}
+
+
+.wp-element-caption {
+  font-size: .8rem;
+  font-style: italic;
+}
+
+
+.wp-block-quote {
+  background-size: 2rem;
+  border-bottom: 1px solid var(--color-gamma);
+  border-top: 1px solid var(--color-gamma);
+  margin: 0 0 2rem;
+  padding: 2.5rem 1rem 1rem;
+  position: relative;
+  
+  &:before {
+    background: url("./images/quote.svg") 0 0 no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 2rem;
+    left: 0;
+    position: absolute;
+    top: .25rem;
+    transform: rotate(180deg);
+    width: 2rem;
+  }
+  
+  &:after {
+    background: url("./images/quote.svg") right 92% no-repeat;
+    background-size: cover;
+    bottom: .25rem;
+    display: block;
+    content: "";
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    width: 2rem;
+  }
+}
+
+.wp-block-quote p:last-child {
+  margin-bottom: 0;
+}
 
 
 /* Editor
@@ -21,8 +70,8 @@
 }
 
 .acf-block-preview {
-
   .post-content-card__link::after {
     display: none;
   }
 }
+

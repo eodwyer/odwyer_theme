@@ -42,13 +42,11 @@
 }
 
 .post-thumbnail {
-  background: white;
-
   @include clear-link;
- 
 
   img {
     display: block;
+    margin: 0 auto;
   }
 }
 

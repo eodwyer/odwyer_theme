@@ -9,6 +9,7 @@
   .attachment-post-thumbnail {
     display: block;
     height: 100%;
+    max-height: 400px;
     object-fit: cover;
     transition: all .25s;
     width: 100%;
